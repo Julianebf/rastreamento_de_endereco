@@ -30,6 +30,9 @@ RUN mkdir -p database && touch database/database.sqlite
 
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache database
 
+# ... (todo o resto do seu código acima igual)
+
 EXPOSE 80
 
-CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=80
+# Usamos a variável $PORT do Render, ou 80 como padrão caso ela não exista
+CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT:-80}
