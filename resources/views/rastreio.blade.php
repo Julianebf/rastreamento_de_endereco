@@ -104,7 +104,6 @@
                         mapEmbed.style.display = 'block';
                     };
 
-                    // TROCA DO TÍTULO
                     titleText.innerText = "Endereço Mapeado";
 
                     formSection.classList.add('hidden');

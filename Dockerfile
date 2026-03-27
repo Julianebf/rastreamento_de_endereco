@@ -22,6 +22,5 @@ RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
 # Porta que a Render usa
 EXPOSE 80
-
 # Comando para iniciar (PHP + Nginx ou Artisan)
 CMD php artisan serve --host=0.0.0.0 --port=80
